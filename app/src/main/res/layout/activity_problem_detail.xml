@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chenxi.cebim.view.CustomToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:left_btn_src="@drawable/head_back"
+    app:left_btn_visible="true"
+    app:title_text="问题详情"
+    app:title_visible="true"
+    tools:context="com.chenxi.cebim.activity.coordination.QuestionListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/detail_swip_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_reply"
+            android:layout_marginTop="5dp">
+
+            <!--列表-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/detail_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <!--底部回复部分-->
+        <RelativeLayout
+            android:id="@+id/rl_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_background" />
+
+            <LinearLayout
+                android:id="@+id/ll_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/et_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="发表回复..." />
+
+                <TextView
+                    android:id="@+id/tv_sent_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="发送" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_reply"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/detail_divice"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray_background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_audio"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/audio_record" />
+
+                    <ImageView
+                        android:id="@+id/iv_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/deatil_img" />
+
+                    <ImageView
+                        android:id="@+id/iv_take_photo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/detail_take_photo" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_document"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/detail_document" />
+
+                    <ImageView
+                        android:id="@+id/iv_at"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/detail_at" />
+                </LinearLayout>
+
+                <!--录音界面-->
+                <LinearLayout
+                    android:id="@+id/ll_detail_audio_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/gray_background" />
+
+                    <TextView
+                        android:id="@+id/detail_count_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="00:00" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp">
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/cb_detail"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            app:cpb_background_progressbar_color="@color/gray_background"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progressbar_color="@color/title_background_colr"
+                            app:cpb_progressbar_width="5dp" />
+
+                        <ImageView
+                            android:id="@+id/detail_press_record"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:src="@drawable/sound_record" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="20dp"
+                        android:text="按住说话，仅支持60s"
+                        android:textColor="@color/gray_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.chenxi.cebim.view.CustomToolBar>

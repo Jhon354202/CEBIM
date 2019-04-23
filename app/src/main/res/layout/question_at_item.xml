@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_data_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_at_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/tv_at_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_at_logo"
+            android:ellipsize="middle"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:text="文件名"
+            android:textColor="@color/black" />
+
+        <cn.refactor.library.SmoothCheckBox
+            android:id="@+id/sb_at"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

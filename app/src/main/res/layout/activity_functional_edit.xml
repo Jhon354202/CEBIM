@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 标题区 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/title_background_colr">
+
+        <RelativeLayout
+            android:id="@+id/rl_edit_back"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/head_back" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fragment_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="功能编辑"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_content_size" />
+
+        <RelativeLayout
+            android:id="@+id/rl_edit_sure"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确定"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_functional_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title_edit">
+
+        <LinearLayout
+            android:id="@+id/ll_functional_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_title_edit"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_choosed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="已选" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:text="长按可以拖拽排序"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divice_edit"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divice_line" />
+
+            <com.chenxi.cebim.view.DragGridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:gravity="center"
+                android:horizontalSpacing="10dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:layout_margin="10dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dip"
+                android:visibility="gone"
+                />
+
+            <com.chenxi.cebim.view.MyGridView
+                android:id="@+id/dragGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="10dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:layout_margin="10dp"
+                android:verticalSpacing="10dip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/divice_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="全部" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divice_line" />
+            </LinearLayout>
+
+            <com.chenxi.cebim.view.MyGridView
+                android:id="@+id/grid_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:horizontalSpacing="10dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:layout_margin="10dp"
+                android:verticalSpacing="10dip" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

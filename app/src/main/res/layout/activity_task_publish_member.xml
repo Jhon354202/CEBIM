@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chenxi.cebim.view.CustomToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:left_btn_src="@drawable/head_back"
+    app:left_btn_visible="true"
+    app:right_tv_text="确定"
+    app:right_tv_visible="true"
+    app:title_text="设置成员"
+    app:title_visible="true">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/seting_member_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title_upload"
+        android:overScrollMode="never" />
+
+</com.chenxi.cebim.view.CustomToolBar>

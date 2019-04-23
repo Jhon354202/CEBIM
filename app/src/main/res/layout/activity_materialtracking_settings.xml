@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chenxi.cebim.view.CustomToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:left_btn_src="@drawable/head_back"
+    app:left_btn_visible="true"
+    app:title_text="构件跟踪设置"
+    app:title_visible="true"
+    tools:context=".activity.material.MaterialtrackingSettingsActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/material_setting_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</com.chenxi.cebim.view.CustomToolBar>

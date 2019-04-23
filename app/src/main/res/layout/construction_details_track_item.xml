@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/vertical_div_line"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/view_div_line_top"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/divice_line" />
+
+        <View
+            android:id="@+id/view_div_line_center"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/feed_back_detail_circle_light_shape" />
+
+        <View
+            android:id="@+id/view_div_line_bottom"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/divice_line" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/vertical_div_line"
+        android:text="入库"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+</RelativeLayout>

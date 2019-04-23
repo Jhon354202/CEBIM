@@ -1,0 +1,146 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.chenxi.cebim"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //X5兼容64位手机
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //电脑的CPU架构和手机的不一样，经常会出问题，用这句解决
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a', 'x86_64'
+            universalApk true
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
+    implementation 'com.android.support:design:28.0.0-rc02'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0-rc02'
+    implementation 'com.android.support:recyclerview-v7:28.0.0-rc02'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.blankj:utilcode:1.20.0'
+
+    //引入AndroidUtilCode
+
+    //    implementation 'com.github.bumptech.glide:glide:4.7.1'//引入glide
+
+    //    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'//glide
+    implementation 'org.xutils:xutils:3.5.0'
+
+    //引入xutils
+    implementation 'pub.devrel:easypermissions:0.4.0'
+
+    //Android6.0添加权限
+    implementation(name: 'bimlink-andriod', ext: 'aar')
+
+    //引入译筑引擎
+    implementation 'com.lzy.widget:imagepicker:0.6.1'
+
+    //引入图片选择器
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    implementation files('libs/tbs_sdk_thirdapp_v3.2.0.1104_43200_sharewithdownload_withfilereader_withoutGame_obfs_20170609_115346.jar')
+
+    //引入腾讯X5内核浏览器
+    implementation 'com.lzy.widget:imagepicker:0.6.1'
+
+    //指定版本
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+
+    //引入okhttp
+    implementation 'com.kyleduo.switchbutton:library:2.0.0'
+
+    //SwitchButton
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+    //eventbus
+    implementation project(':smoothcheckboxlibrary')
+
+    //引入smoothcheckboxlibrary
+    implementation 'com.mylhyl:circleDialog:2.6.6'
+    implementation files('libs/fastjson-1.2.2-sources.jar')
+    implementation files('libs/fastjson-1.2.2.jar')
+    implementation 'org.litepal.android:java:3.0.0'
+
+    //引入LitePal
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    implementation 'com.lqr.audio:library:1.0.0'
+
+    //引入录音库
+    implementation 'com.mikhaellopez:circularprogressbar:2.0.0'
+
+    //引入progressbar
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+
+    //引入二维码扫描库
+    implementation 'com.lzy.widget:ninegridview:0.2.0'
+
+    //引入NineGridView
+    implementation 'com.bm.photoview:library:1.4.1'
+
+    //引入PhotoView项目
+    implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
+    implementation 'com.yanyusong.y_divideritemdecoration:y_divideritemdecoration:2.0'
+
+    //引入高德地图
+    implementation files('libs/Amap_2DMap_V3.0.0_20161227.jar')
+    implementation files('libs/AMap_Location_V3.2.1_20161228.jar')
+    implementation files('libs/AMap_Search_V3.6.1_20161222.jar')
+    implementation 'com.xw.repo:bubbleseekbar:3.19-lite'
+
+    //引入BubbleSeekBar
+    implementation project(':SmallVideoLib2')
+    implementation 'cjt.library.wheel:camera:1.1.9'
+
+    //引入CameraView
+
+    //引入zxing
+    implementation 'com.google.zxing:core:3.2.1'
+    configurations {
+        all*.exclude group: 'com.google.zxing'
+    }
+    implementation 'com.journeyapps:zxing-android-embedded:3.3.0'
+
+    //引入SwipeRecyclerView
+    implementation 'com.yanzhenjie.recyclerview:support:1.3.1'
+    //引入BindView
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+}
+
+configurations {
+    all*.exclude group: 'com.google.zxing'
+}

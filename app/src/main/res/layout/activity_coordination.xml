@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordination_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.chenxi.cebim.view.NoScrollViewPager
+        android:id="@+id/coordination_ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
+
+    <LinearLayout
+        android:id="@+id/ll_coordination_RadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="55.5dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#c0c0c0" />
+
+        <RadioGroup
+            android:id="@+id/coordination_RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_question"
+                style="@style/main_tab"
+                android:checked="true"
+                android:drawableTop="@drawable/icon_project"
+                android:paddingTop="5dp"
+                android:text="问题" />
+
+            <RadioButton
+                android:id="@+id/radio_task"
+                style="@style/main_tab"
+                android:checked="true"
+                android:drawableTop="@drawable/icon_notice"
+                android:paddingTop="5dp"
+                android:text="任务" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

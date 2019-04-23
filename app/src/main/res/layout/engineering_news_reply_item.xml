@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true">
+
+    <TextView
+        android:id="@+id/tv_reply_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="评论人："
+        android:textColor="#3498db"/>
+
+    <TextView
+        android:id="@+id/tv_reply_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_reply_name"
+        android:text="评论内容"/>
+
+</RelativeLayout>

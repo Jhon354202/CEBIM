@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".fragment.data.DataFileFragment">
+
+    <!-- 标题区 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_pic_edit"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/title_background_colr">
+
+        <RelativeLayout
+            android:id="@+id/rl_pic_edit_back"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/head_back" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pic_edit_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="文件编辑"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_content_size" />
+
+        <LinearLayout
+            android:id="@+id/ll_pic_edit_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="上传"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_content_size" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_pic_filename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="标题:" />
+
+            <com.chenxi.cebim.view.ClearEditText
+                android:id="@+id/pic_edit_filename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_pic_edit"
+                android:hint="请输入标题"
+                android:padding="5dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pic_edit_catalog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pic_filename"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="目录:" />
+
+            <com.chenxi.cebim.view.ClearEditText
+                android:id="@+id/picture_edit_catalog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/shape_pic_edit"
+                android:hint="请输入请输入目录"
+                android:padding="5dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_pic_filename"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_filetype"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_pic_filename"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_filetype_pic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="30dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_filetype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="doc文件" />
+
+        </LinearLayout>
+
+        <com.chenxi.cebim.view.SuperFileView2
+            android:id="@+id/superFileView_file_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_pic_filename"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

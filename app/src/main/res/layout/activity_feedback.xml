@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.FeedbackActivity">
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/title_background_colr">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/left_button_offset">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/left_button_offset"
+                android:src="@drawable/head_back" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_content_size" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/title_content_size"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_content_size" />
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_button_offset"
+        android:layout_marginRight="@dimen/left_button_offset"
+        android:layout_marginTop="@dimen/left_button_offset"
+        android:background="@drawable/feedback_box"
+        android:gravity="top"
+        android:hint="请写下您的宝贵意见"
+        android:inputType="textMultiLine"
+        android:minLines="6"
+        android:padding="5dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_button_offset"
+        android:layout_marginRight="@dimen/left_button_offset"
+        android:layout_marginTop="@dimen/left_button_offset"
+        android:background="@drawable/feedback_box"
+        android:hint="请输入您的联系方式（选填）"
+        android:padding="10dp" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+[
+{"itemName":"工程概况","image":"R.mipmap.ic_launcher"},
+{"itemName":"模型","image":"R.mipmap.ic_launcher"},
+{"itemName":"进度管理","image":"R.mipmap.ic_launcher"},
+{"itemName":"协同管理","image":"R.mipmap.ic_launcher"},
+{"itemName":"表单","image":"R.mipmap.ic_launcher"},
+{"itemName":"工程动态","image":"R.mipmap.ic_launcher"},
+{"itemName":"材料","image":"R.mipmap.ic_launcher"},
+{"itemName":"资料","image":"R.mipmap.ic_launcher"},
+{"itemName":"变更","image":"R.mipmap.ic_launcher"},
+{"itemName":"成本","image":"R.mipmap.ic_launcher"},
+{"itemName":"部品部件","image":"R.mipmap.ic_launcher"},
+{"itemName":"大型机械","image":"R.mipmap.ic_launcher"},
+{"itemName":"巡检","image":"R.mipmap.ic_launcher"},
+{"itemName":"更多","image":"R.mipmap.ic_launcher"}
+]

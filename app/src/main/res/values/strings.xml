@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">全资平台（基础版）</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aboutus_part1">\t\t\t\t福建省晨曦信息科技股份有限公司(股票简称:晨曦科技，股票代码: 838773 )。公司致力于中国建设行业信息化及应用软件的研制开发,为客户提供以工程造价、工程管理、BIM技术应用为核心的软件产品和解决方案,是集软件开发、系统集成与培训、咨询、服务为一体的高新技术型企业。</string>
+    <string name="aboutus_part2">\t\t\t\t通过技术的不断积累与创新，晨曦科技引领着建设行业信息化的变革,现已发展成为知名的建筑软件开发商、产品及信息化系统解决方案领先的提供商。公司营销网络遍布全国，在工程软件、办公自动化、企业信息化等领域形成了自身的核心技术优势,拥有系列具有自主知识产权的高新技术产品。公司现与国内多所高校建立了亲密合作伙伴关系。</string>
+    <string name="aboutus_part3">\t\t\t\t专业的产品、完善的服务与科学的管理,获得了广大客户与行业的高度的认可,未来,晨曦科技将通过深入挖掘客户需求,结合创新的思维与技术,实现“技术超越客户梦想”的追求为客户提供最优秀的信息化产品与服务, 成为让客户、员工、股东以及社会所信赖并敬重的企业。</string>
+    <string name="aboutus_part4">联系我们</string>
+    <string name="aboutus_part5">服务热线: 400-007-2310</string>
+    <string name="aboutus_part6">微信公众号:晨曦科技</string>
+</resources>

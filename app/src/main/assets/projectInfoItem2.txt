@@ -1,0 +1,9 @@
+[
+{"itemName":"模型","image":"R.mipmap.ic_launcher"},
+{"itemName":"协同管理","image":"R.mipmap.ic_launcher"},
+{"itemName":"工程动态","image":"R.mipmap.ic_launcher"},
+{"itemName":"资料","image":"R.mipmap.ic_launcher"},
+{"itemName":"部品部件","image":"R.mipmap.ic_launcher"},
+{"itemName":"巡检","image":"R.mipmap.ic_launcher"},
+{"itemName":"更多","image":"R.mipmap.ic_launcher"}
+]

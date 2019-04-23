@@ -1,0 +1,16 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 用于设置标题栏字体大小和正文内容字体大小 -->
+    <dimen name="common_content_size">16sp</dimen>
+    <dimen name="title_content_size">18sp</dimen>
+
+    <!-- 用于设置标题栏左右按钮各自的偏移量 -->
+    <dimen name="right_button_offset">10dp</dimen>
+    <dimen name="left_button_offset">10dp</dimen>
+
+    <!-- 用于设置标题栏高度 -->
+    <dimen name="title_bar_hight">?attr/actionBarSize</dimen>
+</resources>

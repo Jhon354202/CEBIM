@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:background="@color/white"
+    android:paddingLeft="10dp">
+
+    <cn.refactor.library.SmoothCheckBox
+        android:id="@+id/material_item_cb"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@+id/model_item_cb"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_material_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/notice_pic"
+            android:ellipsize="end"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="材料名"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_material_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/notice_pic"
+            android:padding="5dp"
+            android:text="材料ID"
+            android:textColor="@color/gray_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/notice_pic"
+                android:padding="5dp"
+                android:text="状态变更:"
+                android:textColor="@color/gray_text" />
+
+            <TextView
+                android:id="@+id/previousstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/notice_pic"
+                android:padding="5dp"
+                android:text="无跟踪记录"
+                android:textColor="@color/title_background_colr" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/notice_pic"
+                android:padding="5dp"
+                android:text=">"
+                android:textColor="@color/title_background_colr" />
+
+            <TextView
+                android:id="@+id/tv_material_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/notice_pic"
+                android:padding="5dp"
+                android:text="出场"
+                android:textColor="@color/title_background_colr" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

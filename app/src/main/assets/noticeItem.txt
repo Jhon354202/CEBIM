@@ -1,0 +1,8 @@
+[
+{"itemName":"问题","image":"R.drawable.password"},
+{"itemName":"表单","image":"R.mipmap.ic_launcher"},
+{"itemName":"任务","image":"R.mipmap.ic_launcher"},
+{"itemName":"工程动态","image":"R.mipmap.ic_launcher"},
+{"itemName":"工程通知","image":"R.mipmap.ic_launcher"},
+{"itemName":"公告通知","image":"R.mipmap.ic_launcher"}
+]

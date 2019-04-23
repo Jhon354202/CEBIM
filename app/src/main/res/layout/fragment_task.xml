@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.chenxi.cebim.view.CustomToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:left_btn_src="@drawable/head_back"
+    app:left_btn_visible="true"
+    app:first_right_btn_src="@drawable/toolbar_add"
+    app:first_right_btn_visible="true"
+    app:second_right_btn_src="@drawable/toolbar_screen"
+    app:second_right_btn_visible="true"
+    app:title_text="任务"
+    app:title_visible="true">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/task_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_title_recent" />
+
+    <View
+        android:id="@+id/view_task"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/task_tablayout"
+        android:background="@color/gray_background" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/task_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_task" />
+
+</com.chenxi.cebim.view.CustomToolBar>

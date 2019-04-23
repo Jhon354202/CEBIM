@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/vertical_div_line"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_div_line_top"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#aaa" />
+
+        <View
+            android:id="@+id/view_div_line_center"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/feed_back_detail_circle_light_shape" />
+
+        <View
+            android:id="@+id/view_div_line_bottom"
+            android:layout_width="2dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#aaa"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/retry_layout"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_toRightOf="@id/vertical_div_line">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/header_profile"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/image"
+            android:text="张建龙"
+            android:textColor="@color/black"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:id="@+id/location_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/location"
+                android:text="铜盘路"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_view"
+            android:layout_marginLeft="15dp"
+            android:text="2019.4.12 15:33"
+            android:textColor="@color/black"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/retry_layout"
+        android:text="ddd"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+</RelativeLayout>

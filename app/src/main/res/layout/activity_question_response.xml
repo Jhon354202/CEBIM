@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chenxi.cebim.view.CustomToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:left_btn_src="@drawable/head_back"
+    app:left_btn_visible="true"
+    app:right_tv_text="发送"
+    app:right_tv_visible="true"
+    app:title_text="问题回复"
+    app:title_visible="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_add_response"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <!--发表回复界面-->
+                <EditText
+                    android:id="@+id/et_response"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="发表回复..."
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_response_audio_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/add_document_shape"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_response_audio_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/play_audio_first" />
+
+                    <TextView
+                        android:id="@+id/tv_response_audio_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/iv_response_audio_play"
+                        android:text="00:00"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/del_response_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/del_record" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/response_pic_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/response_document_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+                <!--讨论组-->
+                <LinearLayout
+                    android:id="@+id/ll_response_at"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/detail_head_pic" />
+
+                    <TextView
+                        android:id="@+id/tv_response_at"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="周鑫" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_add_response"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_response_audio"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/audio_record" />
+
+                <ImageView
+                    android:id="@+id/iv_response_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/deatil_img" />
+
+                <ImageView
+                    android:id="@+id/iv_response_take_photo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/detail_take_photo" />
+
+                <ImageView
+                    android:id="@+id/iv_response_add_document"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/detail_document" />
+
+                <ImageView
+                    android:id="@+id/iv_response_at"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/detail_at" />
+            </LinearLayout>
+
+            <!--录音界面-->
+            <LinearLayout
+                android:id="@+id/ll_response_audio_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray_background" />
+
+                <TextView
+                    android:id="@+id/response_count_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="00:00" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/cb_response"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerInParent="true"
+                        app:cpb_background_progressbar_color="@color/gray_background"
+                        app:cpb_background_progressbar_width="5dp"
+                        app:cpb_progressbar_color="@color/title_background_colr"
+                        app:cpb_progressbar_width="5dp" />
+
+                    <ImageView
+                        android:id="@+id/response_press_record"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:src="@drawable/sound_record" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="20dp"
+                    android:text="按住说话，仅支持60s"
+                    android:textColor="@color/gray_text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.chenxi.cebim.view.CustomToolBar>

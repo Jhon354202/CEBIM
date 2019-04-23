@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chenxi.cebim">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 播音 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.LoginActivity" />
+        <activity
+            android:name=".activity.NavigationActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activity.ProjectActivity" />
+        <activity android:name=".activity.model.ModelListActivity" />
+        <activity android:name=".activity.FunctionalEditActivity" />
+        <activity android:name=".activity.ProjectSummaryActivity" />
+        <activity android:name=".activity.ProgressActivity" />
+        <activity android:name=".activity.coordination.QuestionListActivity" />
+        <activity android:name=".activity.FormActivity" />
+        <activity android:name=".activity.TaskListActivity" />
+        <activity android:name=".activity.engineeringNews.EngineeringNewsActivity" />
+        <activity android:name=".activity.ShowModelActivity" />
+        <activity
+            android:name=".activity.engineeringNews.ProjectPublishActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity
+            android:name=".activity.DataActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".activity.data.SingleFileActivity" />
+        <activity android:name=".activity.data.DirActivity" />
+        <activity android:name=".activity.PreviewFileActivity" />
+        <!-- 腾讯内核播放视频 -->
+        <activity
+            android:name="com.tencent.smtt.sdk.VideoActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.tencent.smtt.tbs.video.PLAY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.data.PictureEditActivity" />
+        <activity android:name=".activity.SingleProgressActivity" />
+        <activity android:name=".activity.RefreshActivity" />
+        <activity android:name=".activity.material.MaterialActivity" />
+        <activity android:name=".activity.ChangeActivity" />
+        <activity android:name=".activity.CostActivity" />
+        <activity android:name=".activity.ComponentActivity" />
+        <activity android:name=".activity.MechanicalActivity" />
+        <activity android:name=".activity.coordination.CoordinationActivity" />
+        <activity android:name=".activity.data.FileMoveActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.chenxi.cebim.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activity.coordination.NewQuestion" />
+        <activity android:name=".activity.coordination.AddDocumentActivity" />
+        <activity android:name=".activity.coordination.CategoryActivity" />
+        <activity android:name=".activity.coordination.SystemTypeActivity" />
+        <activity android:name=".activity.coordination.ProblemDetail" />
+        <activity android:name=".activity.coordination.DiscussionGroupActivity" />
+        <activity android:name=".activity.coordination.AtActivity" />
+        <activity android:name=".activity.coordination.QuestionResponseActivity" />
+        <activity android:name=".activity.coordination.QuestionScreenActivity" />
+        <activity android:name=".activity.coordination.SlidePreviewPicActivity" />
+        <activity android:name=".activity.engineeringNews.GetModelNameActivity" />
+        <activity
+            android:name=".activity.PlayVedioActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.coordination.TaskDetailActivity" />
+        <activity android:name=".activity.inspection.ScanActivity" />
+        <!-- 设置key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="0a798b7c9ea5156966a1e1cd354751be" />
+        <!-- 声明定位service -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".activity.inspection.LocationTuning" />
+        <activity android:name=".activity.inspection.LocationSearchActivity" />
+        <activity android:name=".activity.coordination.TaskDataActivity" />
+        <activity android:name=".activity.coordination.TaskEditActivity" />
+        <activity android:name=".activity.coordination.TaskEditMemberActivity" />
+        <activity android:name=".activity.coordination.TaskScreenActivity" />
+        <activity android:name=".activity.coordination.PublishTaskActivity" />
+        <activity android:name=".activity.coordination.TaskPublishMemberActivity" />
+        <activity android:name=".activity.coordination.TaskPublishAddDocumentActivity" />
+        <activity android:name=".activity.coordination.TaskFeedBackActivity" />
+        <activity android:name=".activity.coordination.TaskFeedBackAddDocumentActivity" />
+        <activity android:name=".activity.coordination.TaskFeedBackRecordActivity" />
+        <activity android:name="com.mabeijianxi.smallvideorecord2.MediaRecorderActivity" />
+        <activity android:name=".activity.model.WebModelActivity" />
+        <activity android:name=".activity.material.MaterialFollowActivity" />
+        <activity android:name=".activity.model.ScreecModelActivity" />
+        <activity android:name=".activity.material.MyLastFollowingRecordActivity" />
+        <activity android:name=".activity.material.LastFollowingSearchActivity" />
+        <activity android:name=".activity.material.ConstructionDetailsTrackingActivity" />
+        <activity android:name=".activity.AboutasActivity" />
+        <activity android:name=".activity.FeedbackActivity" />
+        <activity android:name=".activity.material.ComponentTrackingDetailsActivity" />
+        <activity android:name=".activity.zxing.activity.CaptureActivity" />
+        <activity android:name=".activity.material.StructuralDetailsActivity" />
+        <activity android:name=".activity.material.MaterialtrackingSettingsActivity" />
+        <activity android:name=".activity.material.MaterialFollowBatchSetupActivity" />
+        <activity android:name=".activity.material.MaterialTrackingSubmodeStatisticsActivity" />
+        <activity android:name=".activity.material.MaterialTrackingStatisticsActivity" />
+        <activity android:name=".activity.material.ProjectOverallDataStatisticsActivity" />
+        <activity android:name=".activity.material.MaterialFollowSearchActivity" />
+        <activity android:name=".activity.material.MaterialTrackingSubmodeStatisticsSearchActivity" />
+        <activity android:name=".activity.material.OpenOverallActivity"/>
+        <activity android:name=".activity.material.OpenSubtemplateActivity"/>
+    </application>
+
+</manifest>

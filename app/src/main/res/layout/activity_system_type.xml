@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chenxi.cebim.view.CustomToolBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:left_btn_src="@drawable/head_back"
+    app:left_btn_visible="true"
+    app:title_text="选择专业"
+    app:title_visible="true"
+    tools:context="com.chenxi.cebim.activity.coordination.QuestionListActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/system_type_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title_upload"
+        android:overScrollMode="never" />
+
+</com.chenxi.cebim.view.CustomToolBar>

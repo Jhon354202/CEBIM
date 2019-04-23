@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题区 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_signinactivity"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/title_background_colr">
+
+        <LinearLayout
+            android:id="@+id/ll_back_locationtuning"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/left_button_offset"
+                android:layout_marginRight="@dimen/left_button_offset"
+                android:src="@drawable/head_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="地点微调"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_content_size" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/right_button_offset">
+
+            <ImageView
+                android:id="@+id/iv_locationtuning_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/right_button_offset"
+                android:paddingRight="@dimen/right_button_offset"
+                android:src="@drawable/search" />
+
+            <TextView
+                android:id="@+id/tv_ensure"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_locationtuning_search"
+                android:background="@drawable/sure_button"
+                android:gravity="center"
+                android:paddingLeft="@dimen/right_button_offset"
+                android:paddingRight="@dimen/right_button_offset"
+                android:text="确定"
+                android:textColor="@color/title_background_colr"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 中间分割veiw -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gray_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入关键字" />
+
+        <Button
+            android:id="@+id/bt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索" />
+
+    </LinearLayout>
+
+    <com.amap.api.maps2d.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/locationTuning_map"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_locationtuning_no_res"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e6e6e6"
+            android:visibility="gone">
+
+            <com.chenxi.cebim.view.CircleImageView
+                android:id="@+id/iv_lastsignin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="20dp"
+                android:src="@drawable/hava_no_resource" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_lastsignin"
+                android:layout_centerInParent="true"
+                android:text="你搜索的地点不存在" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:text="或者超出了微调允许的范围" />
+        </RelativeLayout>
+
+        <com.chenxi.cebim.view.XListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/pb_search_resource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+
+</LinearLayout>
